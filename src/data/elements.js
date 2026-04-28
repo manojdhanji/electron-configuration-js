@@ -8,7 +8,7 @@ export const ELEMENTS = [
         symbol: "H",
         name: "Hydrogen",
         atomicMass: 1.008,
-        category: "nonmetal"
+        category: "non-metal"
     },
     {
         atomicNumber: 2,
@@ -43,21 +43,21 @@ export const ELEMENTS = [
         symbol: "C",
         name: "Carbon",
         atomicMass: 12.011,
-        category: "nonmetal"
+        category: "non-metal"
     },
     {
         atomicNumber: 7,
         symbol: "N",
         name: "Nitrogen",
         atomicMass: 14.007,
-        category: "nonmetal"
+        category: "non-metal"
     },
     {
         atomicNumber: 8,
         symbol: "O",
         name: "Oxygen",
         atomicMass: 15.999,
-        category: "nonmetal"
+        category: "non-metal"
     },
     {
         atomicNumber: 9,
@@ -106,14 +106,14 @@ export const ELEMENTS = [
         symbol: "P",
         name: "Phosphorus",
         atomicMass: 30.974,
-        category: "nonmetal"
+        category: "non-metal"
     },
     {
         atomicNumber: 16,
         symbol: "S",
         name: "Sulfur",
         atomicMass: 32.060,
-        category: "nonmetal"
+        category: "non-metal"
     },
     {
         atomicNumber: 17,
@@ -239,7 +239,7 @@ export const ELEMENTS = [
         symbol: "Se",
         name: "Selenium",
         atomicMass: 78.971,
-        category: "nonmetal"
+        category: "non-metal"
     },
     {
         atomicNumber: 35,
