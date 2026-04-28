@@ -1,0 +1,262 @@
+/* -------------------------------------------------------
+   Global Theme Variables
+------------------------------------------------------- */
+:root {
+    --bg: #1b1b1b;
+    --bg-panel: #242424;
+    --bg-hover: #2e2e2e;
+
+    --text: #e6e6e6;
+    --text-muted: #b5b5b5;
+
+    --accent: #4cc9f0;
+    --accent-hover: #72d9ff;
+
+    --border: #333;
+    --radius: 6px;
+
+    --transition: 0.15s ease-in-out;
+    --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+    /* Category colors (subtle, high-contrast friendly) */
+    --alkali-metal: #4A6FA5;
+    --alkaline-earth-metal: #6B8F71;
+    --transition-metal: #8A7F8E;
+    --post-transition-metal: #A68A64;
+    --metalloid: #7C8C8C;
+    --nonmetal: #4A8A78;
+    --halogen: #A66C75;
+    --noble-gas: #6C7BA6;
+
+    /* f-block */
+    --lanthanide: #8F7CC3;
+    --actinide: #C39A6B;
+}
+
+/* -------------------------------------------------------
+   Reset + Base
+------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    line-height: 1.5;
+    padding: 1rem;
+}
+
+/* -------------------------------------------------------
+   Layout
+------------------------------------------------------- */
+header {
+    margin-bottom: 1.5rem;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+}
+
+#search-container {
+    max-width: 400px;
+}
+
+#search {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: var(--bg-panel);
+    color: var(--text);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+#search:focus {
+    outline: 2px solid var(--accent);
+}
+
+/* Main layout: table left, details right */
+#app {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 1.5rem;
+}
+
+/* -------------------------------------------------------
+   Periodic Table Grid
+------------------------------------------------------- */
+#periodic-table {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-auto-rows: 70px;
+    gap: 4px;
+    padding: 4px;
+    background: var(--bg-panel);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+/* Element tiles (JS will add classes later) */
+.element-tile {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.element-tile:hover {
+    background: var(--bg-hover);
+    border-color: var(--accent);
+}
+
+.element-tile:focus-visible {
+    outline: 2px solid var(--accent);
+}
+
+/* -------------------------------------------------------
+   Details Panel
+------------------------------------------------------- */
+#details-panel {
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem;
+    min-height: 200px;
+}
+
+#details-panel h2 {
+    margin-bottom: 0.75rem;
+    font-size: 1.4rem;
+}
+
+#element-info {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* -------------------------------------------------------
+   Footer
+------------------------------------------------------- */
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* -------------------------------------------------------
+   Utility Classes
+------------------------------------------------------- */
+.visually-hidden {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+/* -------------------------------------------------------
+   Category Colors
+   (JS will set data-category attributes on tiles)  
+------------------------------------------------------- */
+.element-tile[data-category="alkali-metal"] {
+  background-color: var(--alkali-metal);
+}
+
+.element-tile[data-category="alkaline-earth-metal"] {
+  background-color: var(--alkaline-earth-metal);
+}
+
+.element-tile[data-category="transition-metal"] {
+  background-color: var(--transition-metal);
+}
+
+.element-tile[data-category="post-transition-metal"] {
+  background-color: var(--post-transition-metal);
+}
+
+.element-tile[data-category="metalloid"] {
+  background-color: var(--metalloid);
+}
+
+.element-tile[data-category="nonmetal"] {
+  background-color: var(--nonmetal);
+}
+
+.element-tile[data-category="halogen"] {
+  background-color: var(--halogen);
+}
+
+.element-tile[data-category="noble-gas"] {
+  background-color: var(--noble-gas);
+}
+
+/* f-block */
+.element-tile[data-category="lanthanide"] {
+  background-color: var(--lanthanide);
+}
+
+.element-tile[data-category="actinide"] {
+  background-color: var(--actinide);
+}
+
+/* -------------------------------------------------------
+   Legend
+------------------------------------------------------- */
+#legend {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+#legend h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+    color: var(--text);
+}
+
+.legend-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.swatch {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+    border: 1px solid var(--border);
+}
+
+/* Swatch colors */
+.swatch.alkali-metal { background: var(--alkali-metal); }
+.swatch.alkaline-earth-metal { background: var(--alkaline-earth-metal); }
+.swatch.transition-metal { background: var(--transition-metal); }
+.swatch.post-transition-metal { background: var(--post-transition-metal); }
+.swatch.metalloid { background: var(--metalloid); }
+.swatch.nonmetal { background: var(--nonmetal); }
+.swatch.halogen { background: var(--halogen); }
+.swatch.noble-gas { background: var(--noble-gas); }
+.swatch.lanthanide { background: var(--lanthanide); }
+.swatch.actinide { background: var(--actinide); }

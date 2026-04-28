@@ -1,0 +1,7 @@
+name: "Electron Configuration App"
+services:
+  electron-configuration:
+    build: .
+    container_name: electron-configuration-app
+    ports:
+      - "8082:80"

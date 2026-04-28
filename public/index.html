@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Periodic Table</title>
+
+    <!-- Global styles -->
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Interactive Periodic Table</h1>
+
+        <div id="search-container">
+            <label for="search" class="visually-hidden">Search elements</label>
+            <input id="search" type="text" placeholder="Search by name, symbol, or atomic number" autocomplete="off" />
+        </div>
+    </header>
+
+    <main id="app">
+        <!-- Left: Periodic Table Grid -->
+        <section id="periodic-table" role="grid" aria-label="Periodic Table of Elements">
+            <!-- JS will populate tiles here -->
+        </section>
+
+        <!-- Right: Element Details Panel -->
+        <aside id="details-panel" aria-live="polite" aria-atomic="true">
+            <h2 id="element-name">Selected element</h2>
+            <div id="element-info">
+                <!-- JS will populate details here -->
+            </div>
+        </aside>
+    </main>
+    <section id="legend">
+        <h3>Category Legend</h3>
+        <div class="legend-grid">
+            <div class="legend-item"><span class="swatch alkali-metal"></span> Alkali Metals</div>
+            <div class="legend-item"><span class="swatch alkaline-earth-metal"></span> Alkaline Earth Metals</div>
+            <div class="legend-item"><span class="swatch transition-metal"></span> Transition Metals</div>
+            <div class="legend-item"><span class="swatch post-transition-metal"></span> Post‑Transition Metals</div>
+            <div class="legend-item"><span class="swatch metalloid"></span> Metalloids</div>
+            <div class="legend-item"><span class="swatch nonmetal"></span> Nonmetals</div>
+            <div class="legend-item"><span class="swatch halogen"></span> Halogens</div>
+            <div class="legend-item"><span class="swatch noble-gas"></span> Noble Gases</div>
+            <div class="legend-item"><span class="swatch lanthanide"></span> Lanthanides</div>
+            <div class="legend-item"><span class="swatch actinide"></span> Actinides</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Electron Configuration Engine - JavaScript Edition</p>
+    </footer>
+
+    <!-- App entry point -->
+    <script type="module" src="./app.js"></script>
+</body>
+
+</html>
