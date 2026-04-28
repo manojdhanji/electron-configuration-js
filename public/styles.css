@@ -24,7 +24,7 @@
     --transition-metal: #8A7F8E;
     --post-transition-metal: #A68A64;
     --metalloid: #7C8C8C;
-    --nonmetal: #4A8A78;
+    --non-metal: #4A8A78;
     --halogen: #A66C75;
     --noble-gas: #6C7BA6;
 
@@ -190,8 +190,8 @@ footer {
   background-color: var(--metalloid);
 }
 
-.element-tile[data-category="nonmetal"] {
-  background-color: var(--nonmetal);
+.element-tile[data-category="non-metal"] {
+  background-color: var(--non-metal);
 }
 
 .element-tile[data-category="halogen"] {
@@ -255,7 +255,7 @@ footer {
 .swatch.transition-metal { background: var(--transition-metal); }
 .swatch.post-transition-metal { background: var(--post-transition-metal); }
 .swatch.metalloid { background: var(--metalloid); }
-.swatch.nonmetal { background: var(--nonmetal); }
+.swatch.non-metal { background: var(--non-metal); }
 .swatch.halogen { background: var(--halogen); }
 .swatch.noble-gas { background: var(--noble-gas); }
 .swatch.lanthanide { background: var(--lanthanide); }
