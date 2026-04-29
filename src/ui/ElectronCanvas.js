@@ -2,6 +2,7 @@
 // Handles drawing and animating electron shells for a selected element.
 
 let animationId = null;
+let isPaused = false;
 
 export function angleToPosition(shells) {
     if (!shells || shells.length === 0) return [];
@@ -51,6 +52,10 @@ export function renderElectronCanvas(shells) {
     const canvas = document.getElementById("electron-canvas");
     if (!canvas) return;
 
+    canvas.addEventListener("click", () => {
+        isPaused = !isPaused;
+    });
+
     const ctx = canvas.getContext("2d");
     const w = canvas.width;
     const h = canvas.height;
@@ -68,6 +73,11 @@ export function renderElectronCanvas(shells) {
     const electronAngles = angleToPosition(shells);
 
     function animate() {
+        if (isPaused) {
+            animationId = requestAnimationFrame(animate);
+            return;
+        }
+
         ctx.clearRect(0, 0, w, h);
         // Draw nucleus
         drawNucleus(ctx, cx, cy);
@@ -104,4 +114,5 @@ export function clearElectronCanvas() {
         cancelAnimationFrame(animationId);
         animationId = null;
     }
+    isPaused = false; // reset pause state
 }
