@@ -1,5 +1,5 @@
 import { parseOrbital, ORBITAL_CAPACITY, ORDERED_ORBITALS }
-    from "../src/engine/config.js";
+    from "../../src/engine/config.js";
 
 describe("config.js utilities", () => {
 

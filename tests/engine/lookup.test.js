@@ -2,7 +2,7 @@ import {
   getElementByNumber,
   getElementBySymbol,
   getElementByName
-} from "../src/engine/lookup.js";
+} from "../../src/engine/lookup.js";
 
 describe("Lookup Engine", () => {
 

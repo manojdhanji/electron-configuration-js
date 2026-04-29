@@ -1,4 +1,4 @@
-import { fillOrbitals } from "../src/engine/aufbau.js";
+import { fillOrbitals } from "../../src/engine/aufbau.js";
 
 describe("Aufbau filling (fillOrbitals)", () => {
 

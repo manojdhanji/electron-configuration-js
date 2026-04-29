@@ -1,4 +1,4 @@
-import { sortOrbitalsForDisplay } from "../src/engine/utils.js";
+import { sortOrbitalsForDisplay } from "../../src/engine/utils.js";
 
 describe("sortOrbitalsForDisplay", () => {
 

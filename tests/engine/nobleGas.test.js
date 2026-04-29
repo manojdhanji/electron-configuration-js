@@ -1,7 +1,7 @@
-import { fillOrbitals } from "../src/engine/aufbau.js";
-import { applyExceptions } from "../src/engine/exceptions.js";
+import { fillOrbitals } from "../../src/engine/aufbau.js";
+import { applyExceptions } from "../../src/engine/exceptions.js";
 import { getNobleGasCore, applyNobleGasShorthand }
-    from "../src/engine/nobleGas.js";
+    from "../../src/engine/nobleGas.js";
 
 describe("Noble-gas shorthand logic", () => {
 

@@ -3,7 +3,7 @@ import {
     fullConfigString,
     shorthandConfig,
     electronConfiguration
-} from "../src/engine/index.js";
+} from "../../src/engine/index.js";
 
 describe("index.js public API", () => {
 

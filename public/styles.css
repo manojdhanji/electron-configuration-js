@@ -260,3 +260,24 @@ footer {
 .swatch.noble-gas { background: var(--noble-gas); }
 .swatch.lanthanide { background: var(--lanthanide); }
 .swatch.actinide { background: var(--actinide); }
+
+/* -------------------------------------------------------
+   Electron Configuration Visualizer
+   (Canvas styles)
+------------------------------------------------------- */
+#electron-visualizer-container {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#electron-canvas {
+    width: 250px;
+    height: 250px;
+    display: block;
+}

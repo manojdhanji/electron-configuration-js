@@ -1,7 +1,8 @@
 // src/ui/ElementDetails.js
 // Renders the right-side details panel for a selected element.
-
+import { renderElectronCanvas, clearElectronCanvas } from "./ElectronCanvas.js";
 import { shorthandConfig, fullConfigString } from "../engine/index.js";
+import { configToShells } from "../utils/configToShells.js";
 
 /**
  * Render element details into the details panel.
@@ -40,9 +41,18 @@ export function renderElementDetails(container, element) {
             <span class="label">Full Electron Configuration:</span>
             <span class="value">${config}</span>
         </div>
+
         <div class="detail-row">
             <span class="label">Noble-Gas Shorthand:</span>
             <span class="value">${nbConfig}</span>
         </div>
+
+        <div id="electron-visualizer-container">
+            <canvas id="electron-canvas" width="250" height="250"></canvas>
+        </div>
     `;
+    const shells = configToShells(config);
+    clearElectronCanvas();
+    renderElectronCanvas(shells);
+
 }
