@@ -73,8 +73,8 @@ export function renderElectronCanvas(shells) {
     const electronAngles = angleToPosition(shells);
 
     function animate() {
+        animationId = requestAnimationFrame(animate);
         if (isPaused) {
-            animationId = requestAnimationFrame(animate);
             return;
         }
 
@@ -100,8 +100,6 @@ export function renderElectronCanvas(shells) {
                 drawElectron(ctx, ex, ey);
             }
         });
-
-        animationId = requestAnimationFrame(animate);
     }
     animate();
 }
