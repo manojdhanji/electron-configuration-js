@@ -1,10 +1,10 @@
 // Entry point for the Interactive Periodic Table
 // This file stays small and delegates real work to src/engine + src/ui
 
-import { loadElements } from "../src/data/elements.js";
-import { createPeriodicTable } from "../src/ui/PeriodicTable.js";
-import { renderElementDetails } from "../src/ui/ElementDetails.js";
-import { lookupBySymbol, lookupByAtomicNumber, lookupByName } from "../src/engine/index.js";
+import { loadElements } from "./src/data/elements.js";
+import { createPeriodicTable } from "./src/ui/PeriodicTable.js";
+import { renderElementDetails } from "./src/ui/ElementDetails.js";
+import { lookupBySymbol, lookupByAtomicNumber, lookupByName } from "./src/engine/index.js";
 
 // DOM references
 const tableContainer = document.getElementById("periodic-table");

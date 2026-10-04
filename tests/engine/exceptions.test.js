@@ -1,5 +1,5 @@
-import { fillOrbitals } from "../../src/engine/aufbau.js";
-import { applyExceptions } from "../../src/engine/exceptions.js";
+import { fillOrbitals } from "../../public/src/engine/aufbau.js";
+import { applyExceptions } from "../../public/src/engine/exceptions.js";
 
 describe("Electron configuration exceptions", () => {
 

@@ -1,4 +1,4 @@
-import { angleToPosition } from "../../src/ui/ElectronCanvas.js";
+import { angleToPosition } from "../../public/src/ui/ElectronCanvas.js";
 
 describe("angleToPosition", () => {
     test("returns empty array for empty input", () => {

@@ -1,4 +1,4 @@
-import { configToShells } from "../../src/utils/configToShells.js";
+import { configToShells } from "../../public/src/utils/configToShells.js";
 
 describe("configToShells", () => {
     test("parses a simple 1-shell configuration", () => {
